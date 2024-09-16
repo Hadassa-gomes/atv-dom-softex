@@ -1,0 +1,62 @@
+<!-- calculadora gasolina -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Combustível</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        input {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Combustível</h1>
+        <label for="precoGasolina">Preço da Gasolina (R$ por litro):</label>
+        <input type="number" id="precoGasolina" step="0.01" placeholder="Ex: 5.00">
+        
+        <label for="precoEtanol">Preço do Etanol (R$ por litro):</label>
+        <input type="number" id="precoEtanol" step="0.01" placeholder="Ex: 4.00">
+        
+        <label for="consumoGasolina">Consumo com Gasolina (km/l):</label>
+        <input type="number" id="consumoGasolina" step="0.1" placeholder="Ex: 10">
+        
+        <label for="consumoEtanol">Consumo com Etanol (km/l):</label>
+        <input type="number" id="consumoEtanol" step="0.1" placeholder="Ex: 7">
+        
+        <button onclick="calcularEconomia()">Calcular</button>
+        
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
